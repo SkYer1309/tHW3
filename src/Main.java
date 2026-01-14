@@ -40,5 +40,70 @@ public class Main {
             System.out.println("На каждого ученика расчитано по " + paperForStudent + " листов бумаги");
             System.out.println();
         }
+        {
+            byte bottle = 16;
+            byte timeMinutes = 2;
+            byte efficiencyOneMin = (byte) (bottle / timeMinutes);
+            short time20Minutes = (short) (efficiencyOneMin * 20);
+            short time24Hours = (short) (time20Minutes * 3);
+            short time3Day = (short) (time24Hours * 3);
+            int timeOneMonth = (time3Day * 10);//Меняем тип данных на случай если
+            // производство усовершенствуют и производительность машины увеличится
+            System.out.println("Задача 4:");
+            System.out.println("За 20 минут машина произвела " + time20Minutes + " штук бутылок");
+            System.out.println("За 24 часа машина произвела " + time24Hours + " штук бутылок");
+            System.out.println("За 3 дня машина произвела " + time3Day + " штук бутылок");
+            System.out.println("За 1 месяц машина произвела " + timeOneMonth + " штук бутылок");
+            System.out.println();
+        }
+        {
+            double painWhite = 2.0; // Берём тип с плвающей запятой на случай если колличество банок
+            // получится не целое
+            double painBrown = 4.0;
+            byte paintEverything = 120;
+            byte totalClasses = (byte) (paintEverything / (painWhite + painBrown));
+            float painWhiteTotal = (float) (totalClasses / painWhite);
+            float painBrownTotal = (float) (totalClasses / painBrown);
+            System.out.println("Задача 5:");
+            System.out.println("В школе, где  " + totalClasses + " классов, нужно " + painWhiteTotal +
+                    " банок белой краски \nи " + painBrownTotal + " банок коричневой краски");
+            System.out.println();
+        }
+        {
+            byte bananasTotal = 5;
+            byte bananasOneGr = 80;
+            short milkTotal = 200;
+            short milkOne = (short) ((milkTotal / 100.0) * 105.0);
+            byte iceCreamTotal = 2;
+            byte iceCreamOneGr = 100;
+            byte eggTotal = 4;
+            byte eggOneGr = 70;
+            int weightGr = (bananasTotal * bananasOneGr) + milkOne + (iceCreamTotal * iceCreamOneGr)
+                    + (eggTotal * eggOneGr);
+            int grPerKg = 1000;
+            float weightKg = weightGr / (float) grPerKg;
+            System.out.println("Задача 6:");
+            System.out.println("Вес спортзавтрака в граммах:  " + weightGr + " гр.");
+            System.out.println("Вес спортзавтрака в килограммах:  " + weightKg + " кг.");
+            System.out.println();
+        }
+        {
+            short throwOffKg = 7;
+            short throwOffGrDay1 = 250;
+            short throwOffGrDay2 = 500;
+            short grPerKg = 1000;
+            double throwOffGr = throwOffKg * grPerKg;
+
+            short DayThrowOffGr250 = (short) (throwOffGr / throwOffGrDay1);
+            short DayThrowOffGr500 = (short) (throwOffGr / throwOffGrDay2);
+
+            System.out.println("Задача 7:");
+            System.out.println("Если терять каждый день по 250 гр. " + "спортсмен похудеет за:  \n "
+                    + DayThrowOffGr250 + " дней.");
+            System.out.println();
+            System.out.println("Если терять каждый день по 500 гр. " + "спортсмен похудеет за:  \n"
+                    + DayThrowOffGr500 + " дней.");
+            System.out.println();
+        }
     }
 }
